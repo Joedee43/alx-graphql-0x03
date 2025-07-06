@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 interface InfoProps {
     pages: number
     next: number
@@ -11,6 +13,15 @@ export interface EpisodeProps {
   air_date: string
   episode: string
   info: InfoProps
+}
+
+
+export interface State {
+  hasError: boolean;
+}
+
+export interface ErrorBoundaryProps {
+  children: ReactNode;
 }
 
 export type EpisodeCardProps = Pick<EpisodeProps, 'id' | 'name'| 'air_date' | "episode">
